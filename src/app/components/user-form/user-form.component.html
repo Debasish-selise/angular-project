@@ -1,0 +1,22 @@
+<div class="px-50">
+    <h2>User Form</h2>
+    <mat-card class="width-500">
+        <form action="" #form="ngForm" fxLayout="column">
+            <mat-form-field appearance="outline" fxFlex="50">
+                <mat-label>Input</mat-label>
+                <input type="text" matInput [(ngModel)]="name" required name="name" autocomplete="off">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex="50">
+                <mat-label>Job Title</mat-label>
+                <input type="text" matInput [(ngModel)]="jobTitle" required name="jobTitle" autocomplete="off">
+            </mat-form-field>
+
+            <div fxLayout="row" fxLayoutAlign="end">
+                <button mat-raised-button class="submit-button" (click)="createUser()" [disabled]="form.invalid">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </mat-card>
+</div>
